@@ -1,0 +1,23 @@
+vim-fix-git-diff-path v 37.4.0
+  Adrian Likins <adrian@likins.com>
+
+git diff includes a "a/path/to/file" in git diff
+output. This is a pain, if you want to cut and
+paste that path. This tries to let you just
+c&p that entire prefixed path and do the
+right thing. Ie, open the file referenced.
+It should work anywhere in the git project
+of the current working dir. It's mostly
+intended for use from the command line but
+in theory, any file loading command should work
+we well.
+
+bugs: - doesn't work if you are out of the git project
+        directory.
+      - probably confused if you have an actual file
+        name something like a/path/to/file
+
+
+this is based heavily on file_line.vim form
+https://github.com/bogado/file-line
+
